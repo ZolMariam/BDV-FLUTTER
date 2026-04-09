@@ -1,6 +1,6 @@
 import 'package:bdv_flow/pages/login.dart';
 import 'package:bdv_flow/pages/home.dart';
-// import 'package:bdv_flow/pages/transfer.dart';
+import 'package:bdv_flow/pages/transfer.dart';
 import 'package:flutter/material.dart';
 // import 'login.dart';
 // import 'home.dart';
@@ -19,7 +19,7 @@ class MiAppBDV extends StatelessWidget {
       routes: {
         '/': (context) => const LoginPage(),
         '/home': (context) => const HomePage(),
-        // '/transfer': (context) => const TransferPage(),
+        '/transfer': (context) => const TransferPage(),
       },
     );
   }
