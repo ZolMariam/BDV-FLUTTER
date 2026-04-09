@@ -1,34 +1,26 @@
+import 'package:bdv_flow/pages/login.dart';
+// import 'package:bdv_flow/pages/home.dart';
+// import 'package:bdv_flow/pages/transfer.dart';
 import 'package:flutter/material.dart';
+// import 'login.dart';
+// import 'home.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: TelaInicial(),
-  ));
-}
+void main() => runApp(const MiAppBDV());
 
-class TelaInicial extends StatelessWidget {
-  const TelaInicial({super.key});
+class MiAppBDV extends StatelessWidget {
+  const MiAppBDV({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF4F5F7),
-      body: Stack(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: 100,
-                color: const Color(0xFFB1113B),
-                alignment: Alignment.bottomLeft,
-                padding: const EdgeInsets.all(16),
-                child: const Icon(Icons.notifications_none, color: Colors.white),
-              ),
-            ],
-          ),
-        ],
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'BDV Recreación',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginPage(),
+        // '/home': (context) => const HomePage(),
+        // '/transfer': (context) => const TransferPage(),
+      },
     );
   }
 }
